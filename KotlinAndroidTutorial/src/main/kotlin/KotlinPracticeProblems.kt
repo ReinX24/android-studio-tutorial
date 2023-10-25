@@ -26,8 +26,8 @@ fun main() {
     // Message formatting
 //    val baseSalary = 5000
 //    val bonusAmount = 1000
-//    val totalSalary = "${baseSalary + bonusAmount}"
-//    println("Congratulations for your bonus! You will receive a total of $$totalSalary (additional bonus).")
+//    val totalSalary = "$baseSalary + $bonusAmount"
+//    println("Congratulations for your bonus! You will receive a total of $totalSalary (additional bonus).")
 
     // Implement basic math operations
 //    val firstNumber = 10
@@ -52,19 +52,54 @@ fun main() {
 //    println("$firstNumber - $thirdNumber = $anotherSubtractResult")
 
     // Default parameters
-    val operatingSystem = "Chrome OS"
-    val emailId = "sample@gmail.com"
+//    val operatingSystem = "Chrome OS"
+//    val emailId = "sample@gmail.com"
+//    println(displayAlertMessage(operatingSystem, emailId))
 
-    println(displayAlertMessage(operatingSystem, emailId))
+//    val firstUserEmailId = "user_one@gmail.com"
+//    println(displayAlertMessage(emailId = firstUserEmailId)) // Using named arguments
 
-    val firstUserEmailId = "user_one@gmail.com"
+//    val secondUserOperatingSystem = "Windows"
+//    val secondUserEmailId = "user_two@gmail.com"
+//    println(displayAlertMessage(secondUserOperatingSystem, secondUserEmailId))
 
-    // Using named arguments
-    println(displayAlertMessage(emailId = firstUserEmailId))
+//    val thirdUserOperatingSystem = "Mac OS"
+//    val thirdUserEmail = "user_three@gmail.com"
+//    println(displayAlertMessage(thirdUserOperatingSystem, thirdUserEmail))
+
+//    val userSteps = 4000
+//    val caloriesBurned = pedometerStepsToCalories(userSteps)
+//    println("Walking $userSteps steps burns $caloriesBurned calories")
+
+//    println("Have I spent more time using my phone today: ${timeSpentMoreToday(300, 200)}") // true
+//    println("Have I spent more time using my phone today: ${timeSpentMoreToday(200, 200)}") // false
+//    println("Have I spent more time using my phone today: ${timeSpentMoreToday(200, 220)}") // false
+
+    println(showCityWeather("Ankara", 27, 31, 82))
+    println()
+    println(showCityWeather("Tokyo", 32, 36, 10))
+    println()
+    println(showCityWeather("Cape Town", 59, 64, 2))
+    println()
+    println(showCityWeather("Guatemala City", 50, 55, 7))
+
+}
+
+fun showCityWeather(cityName: String, lowTemp: Int, highTemp: Int, chanceOfRain: Int): String {
+    return "City: $cityName\nLow temperature: $lowTemp, High temperature: $highTemp\nChance of rain: $chanceOfRain%"
+}
+
+fun timeSpentMoreToday(timeSpentToday: Int, timeSpentYesterday: Int): Boolean {
+    return timeSpentToday > timeSpentYesterday
+}
+
+fun pedometerStepsToCalories(numberOfSteps: Int): Double {
+    val caloriesBurnedForEachStep = 0.04
+    return numberOfSteps * caloriesBurnedForEachStep
 }
 
 fun displayAlertMessage(operatingSystem: String = "Unknown OS", emailId: String): String {
-    return  "There's a new sign-in request on $operatingSystem for your Google Account $emailId"
+    return "There's a new sign-in request on $operatingSystem for your Google Account $emailId"
 }
 
 fun add(numOne: Int, numTwo: Int): Int {
