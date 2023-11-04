@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="full_name">Rein Solis</string>
+    <string name="person_title">Information Technology Student</string>
+    <string name="contact_number">+00 (00) 000 000</string>
+    <string name="social_media_handle">\@socialmediahandle</string>
+    <string name="person_email">email@domail.com</string>
+</resources>
